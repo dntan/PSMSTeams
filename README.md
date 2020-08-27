@@ -6,6 +6,7 @@ This is my general guide to particularly useful scripts in powershell for Micros
 Reference: https://docs.microsoft.com/en-us/microsoftteams/teams-powershell-install#install-teams-powershell-public-preview
 
 =========================================================
+
 /* Getting a list of users from your MS team */
 
 	Connect-MicrosoftTeams
