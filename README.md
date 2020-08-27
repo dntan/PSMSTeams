@@ -1,6 +1,6 @@
 # PSMSTeams
 
-This is my general guide to particularly useful scripts in powershell for MicrosoftTeams in my current role.
+/*This is my general guide to particularly useful scripts in powershell for MicrosoftTeams in my current role.*/
 
 /*IMPORTANT set up your powershell and use the preview version to get all the cmdlets*/
 
