@@ -3,6 +3,7 @@
 This is my general guide to particularly useful scripts in powershell for MicrosoftTeams in my current role.
 
 /*IMPORTANT set up your powershell and use the preview version to get all the cmdlets*/
+
 Reference: https://docs.microsoft.com/en-us/microsoftteams/teams-powershell-install#install-teams-powershell-public-preview
 
 =========================================================
@@ -34,6 +35,7 @@ prepare - set up a csv saved as a filename channels.csv with your channel name (
 =========================================================
 
 /*Adding Users to Private Channels via CSV (have you csv ready beforehand use header cname for channel name and email for emails)*/
+
 Reference: https://medium.com/@joaquin.guerrero/adding-bulk-users-to-teams-private-channels-8c9c8e563900
 
 
