@@ -1,8 +1,8 @@
-# PSMSTeams
+# PowerShell MicroSoftTeams
 
 /* This is my general guide to particularly useful scripts in powershell for MicrosoftTeams in my current role. */
 
-/* IMPORTANT set up your powershell and use the preview version to get all the cmdlets */
+/* IMPORTANT set up your powershell and use the preview version 1.1.3 to get all the cmdlets */
 
 Reference: https://docs.microsoft.com/en-us/microsoftteams/teams-powershell-install#install-teams-powershell-public-preview
 
