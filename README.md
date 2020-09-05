@@ -35,9 +35,11 @@ Import-csv channels.csv | foreach{New-TeamChannel -GroupId YOURGROUPID -DisplayN
 
 =========================================================
 
-## Adding Users to Private Channels via CSV (have you csv ready beforehand use header cname for channel name and email for emails)
+## Adding Users to Private Channels via CSV
 
 > Reference: [Adding users to private teams](https://medium.com/@joaquin.guerrero/adding-bulk-users-to-teams-private-channels-8c9c8e563900)
+
+Note: use a csv with header 'cname' for channel name and 'email' for emails
 
 ```
 Connect-MicrosoftTeams
