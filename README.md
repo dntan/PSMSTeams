@@ -4,24 +4,24 @@ This is my general guide to particularly useful scripts in powershell for Micros
 
 IMPORTANT set up your powershell and use the preview version 1.1.3 to get all the cmdlets
 
-Reference: https://docs.microsoft.com/en-us/microsoftteams/teams-powershell-install#install-teams-powershell-public-preview
+> Reference: https://docs.microsoft.com/en-us/microsoftteams/teams-powershell-install#install-teams-powershell-public-preview
 
 =========================================================
 
-#Getting a list of users from your MS team
+## Getting a list of users from your MS team
 
-	Connect-MicrosoftTeams
+	`Connect-MicrosoftTeams`
 	
-	Get-Team -user "zID@ad.unsw.edu.au" // copy the Group ID you want from the list
+	`Get-Team -user "zID@ad.unsw.edu.au" // copy the Group ID you want from the list`
 	
-	Get-TeamUser -GroupId YOURGROUPID | export-csv C:\something something\teamusers.csv
+	`Get-TeamUser -GroupId YOURGROUPID | export-csv C:\something something\teamusers.csv`
 
 
 =========================================================
 
-#Creating Multiple channels both Standard and Private from a csv
+## Creating Multiple channels both Standard and Private from a csv
 
-Reference: https://www.ntweekly.com/2020/04/11/create-multiple-microsoft-teams-channels-powershell/
+> Reference: https://www.ntweekly.com/2020/04/11/create-multiple-microsoft-teams-channels-powershell/
 
 prepare - set up a csv saved as a filename channels.csv with your channel name (cname) in column 1
 
@@ -34,9 +34,9 @@ prepare - set up a csv saved as a filename channels.csv with your channel name (
 
 =========================================================
 
-#Adding Users to Private Channels via CSV (have you csv ready beforehand use header cname for channel name and email for emails)
+## Adding Users to Private Channels via CSV (have you csv ready beforehand use header cname for channel name and email for emails)
 
-Reference: https://medium.com/@joaquin.guerrero/adding-bulk-users-to-teams-private-channels-8c9c8e563900
+> Reference: https://medium.com/@joaquin.guerrero/adding-bulk-users-to-teams-private-channels-8c9c8e563900
 
 
 	Connect-MicrosoftTeams
