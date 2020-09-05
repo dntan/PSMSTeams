@@ -10,11 +10,11 @@ IMPORTANT set up your powershell and use the preview version 1.1.3 to get all th
 
 ## Getting a list of users from your MS team
 
-`Connect-MicrosoftTeams`
-	
-`Get-Team -user "zID@ad.unsw.edu.au" // copy the Group ID you want from the list`
-	
-`Get-TeamUser -GroupId YOURGROUPID | export-csv C:\something something\teamusers.csv`
+	Connect-MicrosoftTeams
+
+	Get-Team -user "zID@ad.unsw.edu.au" // copy the Group ID you want from the list
+
+	Get-TeamUser -GroupId YOURGROUPID | export-csv C:\something something\teamusers.csv
 
 
 =========================================================
