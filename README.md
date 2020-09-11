@@ -21,7 +21,7 @@ Get-TeamUser -GroupId YOURGROUPID | export-csv C:\something something\teamusers.
 
 ## Creating Multiple channels both Standard and Private from a csv
 
-> Reference: [Craeting bulk Channel for teams](https://www.ntweekly.com/2020/04/11/create-multiple-microsoft-teams-channels-powershell/)
+> Reference: [Creating bulk Channel for teams](https://www.ntweekly.com/2020/04/11/create-multiple-microsoft-teams-channels-powershell/)
 
 Note: Prepare - set up a csv saved as a filename channels.csv with your channel name (cname) in column 1
 
@@ -39,7 +39,9 @@ Import-csv channels.csv | foreach{New-TeamChannel -GroupId YOURGROUPID -DisplayN
 
 > Reference: [Adding users to private teams](https://medium.com/@joaquin.guerrero/adding-bulk-users-to-teams-private-channels-8c9c8e563900)
 
-Note: use a csv with header 'cname' for channel name and 'email' for emails
+Note:
+- You can only add users to channels you have created and are an owner.
+- use a csv with header 'cname' for channel name and 'email' for emails
 
 ```
 Connect-MicrosoftTeams
