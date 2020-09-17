@@ -8,6 +8,22 @@ IMPORTANT: set up your powershell and use the preview version 1.1.3 to get all t
 
 =========================================================
 
+## Adding a list of users to your MS Team via a csv
+
+Notes:
+- use a csv with header 'email'
+- the email you have to use in the csv is "zID@ad.unsw.edu.au"
+
+```
+Connect-MicrosoftTeams
+
+Get-Team -user "zID@ad.unsw.edu.au" // copy the Group ID you want from the list
+
+Import-Csv -Path "users.csv" | foreach{Add-TeamUser -GroupId GROUPID -user $_.email}
+```
+
+=========================================================
+
 ## Getting a list of users from your MS team as a csv
 ```
 Connect-MicrosoftTeams
@@ -44,7 +60,7 @@ Import-csv channels.csv | foreach{New-TeamChannel -GroupId YOURGROUPID -DisplayN
 Notes:
 - You can only add users to channels you have created and are an owner.
 - use a csv with header 'cname' for channel name and 'email' for emails
-- the email you have to use in ghe csv is "zID@ad.unsw.edu.au" (same as from the user import list above)
+- the email you have to use in the csv is "zID@ad.unsw.edu.au" (same as from the user import list above)
 
 ```
 Connect-MicrosoftTeams
