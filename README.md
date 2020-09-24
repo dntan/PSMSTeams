@@ -59,9 +59,10 @@ Import-csv channels.csv | foreach{New-TeamChannel -GroupId YOURGROUPID -DisplayN
 > Reference: [Adding users to private teams](https://medium.com/@joaquin.guerrero/adding-bulk-users-to-teams-private-channels-8c9c8e563900)
 
 Notes:
-- You can only add users to channels you have created and are an owner.
+- You can only add users to channels you have created and are the owner.
 - use a csv with header 'cname' for channel name and 'email' for emails.
-- the email you have to use in the csv is "zID@ad.unsw.edu.au" (same as from the user import list above)
+- the email you have to use in the csv is "zID@ad.unsw.edu.au" (same as from the user import list above).
+- be sure to add your relative tutors and teachers at this set, you can promote them to Owners of their relative channel afterwards.
 
 ```
 Connect-MicrosoftTeams
@@ -72,3 +73,21 @@ Import-Csv -Path “YOUR_FILE_PATH” | foreach{Add-TeamChannelUser -GroupId YOU
 ```
 
 =========================================================
+
+## Promoting Users to "Owners" in Private channels via csv
+
+> Reference: [Add then promote]()
+
+Notes:
+- You will need to set up a separate csv that contains the users you want to promote in relative channels as Owners.
+- use a csv with header 'cname' for the private channel name they already exist in and 'email' for emails.
+
+```
+Connect-MicrosoftTeams
+
+Get-Team -User "zID@ad.unsw.edu.au" // then copy the GroupId that you want to add private channels to
+
+Import-Csv -Path “YOUR_FILE_PATH” | foreach{Add-TeamChannelUser -GroupId YOUR_TEAM_ID -DisplayName $_.cname -user $_.email -Role Owner}
+
+```
+
