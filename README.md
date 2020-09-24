@@ -5,6 +5,7 @@ This is my general guide to particularly useful scripts in powershell for Micros
 IMPORTANT: set up your powershell and use the preview version 1.1.3 to get all the cmdlets
 
 > Reference: [Teams Powershell Docs](https://docs.microsoft.com/en-us/microsoftteams/teams-powershell-install#install-teams-powershell-public-preview)
+> Cmdlets: [Teams Powershell Cmdlets](https://docs.microsoft.com/en-us/powershell/module/teams/?view=teams-ps)
 
 =========================================================
 
@@ -59,7 +60,7 @@ Import-csv channels.csv | foreach{New-TeamChannel -GroupId YOURGROUPID -DisplayN
 
 Notes:
 - You can only add users to channels you have created and are an owner.
-- use a csv with header 'cname' for channel name and 'email' for emails
+- use a csv with header 'cname' for channel name and 'email' for emails and 'role' for either Owner or Member.
 - the email you have to use in the csv is "zID@ad.unsw.edu.au" (same as from the user import list above)
 
 ```
@@ -67,7 +68,7 @@ Connect-MicrosoftTeams
 
 Get-Team -User "zID@ad.unsw.edu.au" // then copy the GroupId that you want to add private channels to
 
-Import-Csv -Path “YOUR_FILE_PATH” | foreach{Add-TeamChannelUser -GroupId YOUR_TEAM_ID -DisplayName $_.cname -user $_.email}
+Import-Csv -Path “YOUR_FILE_PATH” | foreach{Add-TeamChannelUser -GroupId YOUR_TEAM_ID -DisplayName $_.cname -user $_.email -Role $_.role}
 ```
 
 =========================================================
