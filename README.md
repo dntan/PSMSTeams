@@ -60,7 +60,7 @@ Import-csv channels.csv | foreach{New-TeamChannel -GroupId YOURGROUPID -DisplayN
 
 Notes:
 - You can only add users to channels you have created and are an owner.
-- use a csv with header 'cname' for channel name and 'email' for emails and 'role' for either Owner or Member.
+- use a csv with header 'cname' for channel name and 'email' for emails.
 - the email you have to use in the csv is "zID@ad.unsw.edu.au" (same as from the user import list above)
 
 ```
@@ -68,7 +68,7 @@ Connect-MicrosoftTeams
 
 Get-Team -User "zID@ad.unsw.edu.au" // then copy the GroupId that you want to add private channels to
 
-Import-Csv -Path “YOUR_FILE_PATH” | foreach{Add-TeamChannelUser -GroupId YOUR_TEAM_ID -DisplayName $_.cname -user $_.email -Role $_.role}
+Import-Csv -Path “YOUR_FILE_PATH” | foreach{Add-TeamChannelUser -GroupId YOUR_TEAM_ID -DisplayName $_.cname -user $_.email}
 ```
 
 =========================================================
