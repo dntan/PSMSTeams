@@ -76,7 +76,7 @@ Import-Csv -Path “YOUR_FILE_PATH” | foreach{Add-TeamChannelUser -GroupId YOU
 
 ## Promoting Users to "Owners" in Private channels via csv
 
-> Reference: [Add then promote]()
+> Reference: [Add then promote](https://docs.microsoft.com/en-us/powershell/module/teams/add-teamchanneluser?view=teams-ps)
 
 Notes:
 - You will need to set up a separate csv that contains the users you want to promote in relative channels as Owners.
