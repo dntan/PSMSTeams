@@ -18,7 +18,7 @@ Notes:
 ```
 Connect-MicrosoftTeams
 
-Get-Team -user "zID@ad.unsw.edu.au" // copy the Group ID you want from the list
+Get-Team -User "zID@ad.unsw.edu.au" // copy the Group ID you want from the list
 
 Import-Csv -Path "users.csv" | foreach{Add-TeamUser -GroupId GROUPID -user $_.email}
 ```
@@ -29,7 +29,7 @@ Import-Csv -Path "users.csv" | foreach{Add-TeamUser -GroupId GROUPID -user $_.em
 ```
 Connect-MicrosoftTeams
 
-Get-Team -user "zID@ad.unsw.edu.au" // copy the Group ID you want from the list
+Get-Team -User "zID@ad.unsw.edu.au" // copy the Group ID you want from the list
 
 Get-TeamUser -GroupId YOURGROUPID | export-csv C:\something something\teamusers.csv
 ```
@@ -47,7 +47,7 @@ Notes:
 ```
 Connect-MicrosoftTeams
 	
-Get-Team -user "zID@ad.unsw.edu.au" // copy the Group ID you want from the list
+Get-Team -User "zID@ad.unsw.edu.au" // copy the Group ID you want from the list
 
 Import-csv channels.csv | foreach{New-TeamChannel -GroupId YOURGROUPID -DisplayName $_.cname -MembershipType $_.ctype}
 ```
