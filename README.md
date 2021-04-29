@@ -3,9 +3,17 @@
 This is my general guide to particularly useful scripts in powershell for MicrosoftTeams in my current role as an educational developer at UNSW Sydney.
 
 IMPORTANT: set up your powershell and use the preview version 1.1.3 to get all the cmdlets
+and make sure your Set-ExecutionPolicy is set to RemoteSigned.
+
+```
+Set-ExecutionPolicy -List
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
 
 > Reference: [Teams Powershell Docs](https://docs.microsoft.com/en-us/microsoftteams/teams-powershell-install#install-teams-powershell-public-preview)
 > Cmdlets: [Teams Powershell Cmdlets](https://docs.microsoft.com/en-us/powershell/module/teams/?view=teams-ps)
+> Set-ExecutionPolicy: [Set-ExecutionPolicy](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.1)
 
 =========================================================
 
