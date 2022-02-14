@@ -6,7 +6,7 @@ IMPORTANT: set up your powershell and use the preview version 1.1.3 to get all t
 and make sure your Set-ExecutionPolicy is set to RemoteSigned.
 
 ```
-Set-ExecutionPolicy -List
+Get-ExecutionPolicy -List
 
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
@@ -82,7 +82,7 @@ Import-Csv -Path “YOUR_FILE_PATH” | foreach{Add-TeamChannelUser -GroupId YOU
 
 =========================================================
 
-## Promoting Users to "Owners" in Private channels via csv
+## Promoting Users to "Owners" in Private channels via csv [NOTE! NOT working as of 2021] 
 
 > Reference: [Add then promote](https://docs.microsoft.com/en-us/powershell/module/teams/add-teamchanneluser?view=teams-ps)
 
